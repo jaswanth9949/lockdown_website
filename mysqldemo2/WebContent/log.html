@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<style>
+/* Style all input fields */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+/* Style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+}
+/*Style the container for inputs */
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+</style>
+</head>
+<body background="C:\Users\JASWNATH SATYA\Desktop\veg11.jpg"><div align="center">
+<br><br><br>
+<h1 style="color:yellow"><b><u>Login</u></b></h1>
+
+<table border="1" cellpadding="5" cellspacing="5" bgcolor="white" >
+
+  <form action="logform">
+    <tr><td><label for="usrname">Email</label>
+    <input type="text" id="usrname" name="usrname" required></td>
+    </tr><tr>
+    <td><label for="psw">Password</label>
+    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></td>
+    </tr><tr>
+   <td> <input type="submit" value="Submit" name="done"></td>
+    </tr>
+  </form>                                                            
+
+</table>
+<div id="message" align="center"><table>
+  <tr><td><h3>Password must contain the following:</h3></td></tr>
+  <tr><td><p id="letter" class="invalid">A <b>lowercase</b> letter</p></td></tr>
+  <tr><td><p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p></td></tr>
+  <tr><td><p id="number" class="invalid">A <b>number</b></p></td></tr>
+  <tr><td><p id="length" class="invalid">Minimum <b>8 characters</b></p></td></tr>
+</table>
+</div>
+				
+
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("button").click(function(){
+            var s=0;
+            var favorite = [];
+            var allveget = {Carrot:30, Potato:35, Beans:60,Colacassia:45,LadysFinger:50,Sweetpotato:30,Cauliflower:35,Cabbage:25,Capsicam:35,Brinjil:45,BottleGourd:55};
+            $.each($("input[name='vegetables']:checked"), function(){            
+                favorite.push($(this).val());
+               var k=$(this).val();
+               s=s+allveget[k];
+            });
+            document.getElementById("bill").innerHTML=favorite;
+            document.getElementById("cost").innerHTML="Total cost = "+s;
+            document.getElementById("allveg").value=favorite;
+            document.getElementById("totalcost").value=s;
+		if(s!=0){
+            document.getElementById("submit").style.display = "block";
+           }
+        });
+    });
+</script>
+
+</head>
+
+
+<body background="C:\Users\JASWNATH SATYA\Desktop\veg7.jpg" ><div align="center">
+    <h1 style="color:white">****** Welcome to Veg Shop ******<br>Shop Online In LOCK DOWN</h1>
+    <table border="1" style="background-color:lightblue;" >
+    <tr>
+	<td>
+    <form>
+        <h3>Select your favorite vegetables:</h3>
+        <label><input type="checkbox" value="Potato" name="vegetables" > Potato (1 kg-30 Rs)</label><br>
+        <label><input type="checkbox" value="Beans" name="vegetables"> Beans (1 Kg-35 Rs)</label><br>
+        <label><input type="checkbox" value="Carrot" name="vegetables"> carrot (1 kg-60 Rs)</label><br>
+        <label><input type="checkbox" value="Colacassia" name="vegetables" > Colacassia (1 kg-45 Rs)</label><br>
+	<label><input type="checkbox" value="LadysFinger" name="vegetables" > Lady'sFinger (1 kg-50 Rs)</label><br>
+	<label><input type="checkbox" value="Sweetpotato" name="vegetables" > Sweet potato (1 kg-30 Rs)</label><br>
+	<label><input type="checkbox" value="Cauliflower" name="vegetables" > Cauli Flower (1 kg-35 Rs(1 flower))</label><br>
+	<label><input type="checkbox" value="Cabbage" name="vegetables" > Cabbage(1 kg-25 Rs)</label><br>
+	<label><input type="checkbox" value="Capsicam" name="vegetables" >Capsicam (1 kg-35 Rs)</label><br>
+	<label><input type="checkbox" value="Brinjil" name="vegetables" > Brinjil(1 kg- 45Rs)</label><br>
+	<label><input type="checkbox" value="BottleGourd" name="vegetables" > BottleGourd(1 kg- 55Rs)</label><br>
+        <hr><hr>
+        <button type="button" style="height:40px;width:260px"><b>*****Get Bill*****</b></button><hr><hr>
+    </form></td>
+   </tr>
+   <tr>	<td>
+    <p id="bill">
+        <p id="cost">
+  <form action="veg">
+                Name:<input type="text" placeholder="Enter name" name="name"/><br/>
+                
+                Ph.no:<select><option>+91</option><option>+92</option><option>+93</option></select><input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  placeholder="***-***-****" name="ph"><br>[ex:123-456-7890]
+                <input type="text" name="allveg" id="allveg"style="display:none" >
+		<input type="text" name="totalcost" id="totalcost" style="display:none">
+		<br><br></td>
+	    </tr>
+		<tr><td>
+		<a href="two.html">Display</a><br>
+		<a href="three.html">update</a><br>
+		<input type="submit" id="submit" name="ans" value="confirm" style="display:none">
+		</td></tr>
+	</form>
+</table>
+
+</div>
+</body>
+</html>

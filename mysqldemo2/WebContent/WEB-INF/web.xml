@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:web="http://xmlns.jcp.org/xml/ns/javaee">
+   <servlet>
+    <servlet-name>abcd</servlet-name>
+    <servlet-class>RegServletMysql</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>abcd</servlet-name>
+    <url-pattern>/nveg</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>abcde</servlet-name>
+    <servlet-class>LoginFormMysql</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>abcde</servlet-name>
+    <url-pattern>/logform</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>abc</servlet-name>
+    <servlet-class>VegForm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>abc</servlet-name>
+    <url-pattern>/veg</url-pattern>
+  </servlet-mapping>
+</web-app>
